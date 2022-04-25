@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-#settings for debug toolbar
+# settings for debug toolbar
 INTERNAL_IPS = []
 
 # Application definition
@@ -168,3 +169,4 @@ CKEDITOR_CONFIGS = {
 }
 
 # SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+django_heroku.settings(locals())
