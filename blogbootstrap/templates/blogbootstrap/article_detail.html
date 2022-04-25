@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .mydetailcontent {
+        text-align: justify !important;
+    }
+
+    .img-daidien {
+        width: 100%;
+    }
+    .main-content img{
+        width: 100%;
+    }
+</style>
+<div class="main-content">
+    <img class="img-daidien" src="https://loremflickr.com/750/350/{{object.id}}">
+    {{object.content | safe}}
+<p class="text-end  text-capitalize">{{object.date_published}}</p>
+
+</div>
+{% endblock %}

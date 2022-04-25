@@ -1,0 +1,18 @@
+{%extends 'base.html' %}
+{%block content %}
+{% include './hotnews.html' %}
+<div class="d-flex row">
+    <!-- Blog post-->
+    {% for post in page_obj  %}
+    <div class="card mb-4 col-6">
+        <a href="#!"><img class="card-img-top" src="https://loremflickr.com/750/350/{{post.id}}" alt="..." /></a>
+        <div class="card-body">
+            <div class="small text-muted">{{post.created_at}}</div>
+            <h2 class="card-title h4">{{post.title}}</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+            <a class="btn btn-primary" href=" {% url 'blogbootstrap:detail' post.id %} ">Read more →</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{%endblock %}

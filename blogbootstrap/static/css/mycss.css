@@ -1,0 +1,8 @@
+header {
+    background-image: url(../images/header.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-color: #cccccc; */
+    /* filter: grayscale(0%); */
+}
